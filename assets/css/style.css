@@ -1,0 +1,66 @@
+:root {
+    --primary: #6b62fe;
+    --primary-dark: #02002c;
+    --white: #fff;
+    --black: #000;
+    --light: #f2f2f2;
+    --dark: #3e3e3e;
+    --dark-2: #7e7e7e;
+
+    --default-height: 64px;
+}
+
+body {
+    background-color: var(--light);
+}
+
+.header {
+    width: 100%;
+    height: var(--default-height);
+    background-color: var(--white);
+}
+
+.toolbar {
+    width: auto;
+    height: calc(100vh - var(--default-height));
+    padding: 16px;
+    background-color: var(--dark);
+}
+
+.toolbar-sheet-extended {
+    width: auto;
+    height: calc(100vh - var(--default-height));
+    padding: 16px;
+    background-color: var(--dark-2);
+}
+
+.canvas {
+    width: auto;
+    height: calc(100vh - var(--default-height));
+    padding: 16px;
+    background-color: var(--light);
+}
+
+/* max-sm */
+@media not all and (min-width: 640px) {
+
+    .toolbar {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        height: var(--default-height);
+    }
+
+    .toolbar-sheet-extended {
+        position: fixed;
+        bottom: var(--default-height);
+        margin: auto;
+        width: 100%;
+        height: 30vh;
+    }
+
+    .canvas {
+        height: calc(62vh - var(--default-height));
+    }
+}
